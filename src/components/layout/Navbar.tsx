@@ -39,14 +39,14 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <Link href="/">
-            <div className="cursor-pointer bg-[#0D1B2A] px-4 py-2 rounded-xl">
+            <div className="cursor-pointer bg-[#0D1B2A] px-5 py-3 rounded-xl">
               <img
                 src="/logo-fabmacs.jpg"
                 alt="FABMACS INNOVATION"
-                className="h-10 w-auto object-contain"
+                className="h-14 lg:h-16 xl:h-20 w-auto object-contain"
               />
             </div>
           </Link>
