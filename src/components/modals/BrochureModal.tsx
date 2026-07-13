@@ -20,7 +20,31 @@ export default function BrochureModal({ isOpen, onClose }: Props) {
       { onSuccess: () => setSuccess(true) }
     );
   };
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
 
+  mutation.mutate(
+    {
+      data: {
+        ...form,
+        phone: form.phone || null,
+        company: form.company || null,
+      },
+    },
+    {
+      onSuccess: () => {
+        setSuccess(true);
+
+        const link = document.createElement("a");
+        link.href = "/brochure/fabmacs-brochure.pdf";
+        link.download = "FABMACS-Brochure.pdf";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      },
+    }
+  );
+};
   const handleClose = () => {
     onClose();
     setTimeout(() => {
