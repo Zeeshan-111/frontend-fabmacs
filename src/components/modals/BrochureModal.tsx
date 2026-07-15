@@ -13,13 +13,7 @@ export default function BrochureModal({ isOpen, onClose }: Props) {
   const [success, setSuccess] = useState(false);
   const mutation = useSubmitBrochure();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    mutation.mutate(
-      { data: { ...form, phone: form.phone || null, company: form.company || null } },
-      { onSuccess: () => setSuccess(true) }
-    );
-  };
+ 
 const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
 
