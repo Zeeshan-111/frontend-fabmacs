@@ -316,7 +316,13 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-
+<div className="absolute right-0 top-1/2 -translate-y-1/2 w-[48%] max-w-[650px] hidden lg:flex items-center justify-center">
+  <img
+    src="/hero-product.png.png"
+    alt="FABMACS Industrial Equipment"
+    className="w-full h-auto object-contain"
+  />
+</div>
         {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
